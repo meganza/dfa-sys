@@ -1,0 +1,214 @@
+body {
+  position: relative;
+  padding-bottom: 140px;
+  min-height: 850px;
+  color: #222;
+}
+
+#logo-head {
+  background-color: #44749D;
+}
+
+#logo {
+  padding-top: 15px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  height: 80px;
+}
+
+.user {
+  padding-top: 14px;
+  font-weight: bolder;
+}
+
+.logout {
+  font-weight: lighter;
+  text-decoration: underline;
+}
+
+.content{
+  margin-bottom: 50px;
+}
+
+#myCarousel {
+  height: 300px;
+}
+
+#myCarousel .item {
+  text-align: center;
+  height: 300px;
+}
+
+.footer {
+  font-size: 11px;
+  background-color: #efefef;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  color: #888;
+}
+
+.footer b, .footer a:hover {
+  text-decoration: none;
+  color: #777;
+}
+
+.footer a {
+  color: #aaa;
+}
+
+.footer img {
+  height: 100px;
+}
+
+.content-heading {
+  color: #44749D;
+  font-weight: bold;
+  letter-spacing: 0.2px;
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #44749D;
+}
+
+#useful-links {
+  padding-left: 30px;
+}
+
+#useful-links a, #useful-links a:hover {
+  padding-left: 10px;
+  text-decoration: none;
+  display: block;
+  line-height: 25px;
+  color: #777;
+}
+
+ #useful-links a:hover {
+  color: #333;
+ }
+
+ #news {
+  margin-right: 30px;
+ }
+
+ .news-article {
+  padding-left: 10px;
+  padding-top: 0px;
+  margin-right: 40px;
+  padding-bottom: 20px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+ }
+
+ .news-title {
+  font-weight: bold;
+  color: #555;
+  font-size: 20px;
+ }
+
+ .news-date {
+  font-weight: light;
+  color: #999;
+  padding-bottom: 5px;
+ }
+
+ .news-overview {
+  color: #555;
+ }
+
+.single-content {
+  margin: auto;
+  width: 90%;
+}
+
+.navbar-right a {
+  text-decoration: none;
+}
+
+.form-horizontal {
+  padding-top: 30px;
+}
+
+#no-account {
+  font-size: 12px;
+}
+
+.description {
+  font-size: 10px;
+}
+
+#application {
+  padding-top: 10px;
+}
+
+button a:hover {
+  text-decoration: none;
+}
+
+.pull-right {
+  text-align: right;
+}
+
+.pull-center {
+  text-align: center;
+}
+
+table, th, td {
+  width: 90%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  margin: auto;
+  table-layout: fixed;
+}
+
+.passport-links{
+  margin-top: 10px;
+  margin-left: 20px;
+  padding: 5px;
+  border: 1px #ccc solid;
+  border-radius: 5px;
+}
+
+.passport-links a, .passport-links a:hover {
+  padding-left: 10px;
+  text-decoration: none;
+  display: block;
+  line-height: 25px;
+  color: #777;
+}
+
+.active-links {
+  font-weight: bold;
+}
+
+.form-side {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.form-side-heading {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 15px;
+  color: #333;
+}
+
+.tab {
+  text-indent: 20px;
+}
+
+.appointment-info {
+  padding: 10px;
+  padding-left: 15px;
+  border: 1px solid #dedede;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.countries {
+  font-size: 13px;
+}

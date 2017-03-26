@@ -1,0 +1,215 @@
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="sty
+        lesheet" type="text/css" href="css/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" href="css/dfa.css" />
+  <link rel="stylesheet" type="text/css" href="css/bootstrap-datetimepicker.min.css">
+  <title>DFA - System</title>
+</head>
+
+<body>
+
+  <div id="logo-head">
+    <img id="logo" src="images/Logo.png">
+  </div>
+
+
+  <nav class="navbar navbar-default">
+    <div class="navbar-left">
+      <ul class="nav navbar-nav">
+        <%if(session.getAttribute("id") == null){%>
+        <li class=""><a href="index.jsp">Home</a>
+        <%}else{%>
+        <li class=""><a href="index-loggedin.jsp">Home</a>
+        <%}%>
+        <li class=""><a href="visa-homepage.jsp">Visa</a>
+        <li class=""><a href="visa-sched-1.jsp">Schedule Appointment</a>
+      </ul>
+    </div>
+
+    <% if(session.getAttribute("id") != null){%>
+    <div class="navbar-right">
+      <div class="user">
+        Hi, <%out.println(session.getAttribute("name").toString());%>!
+        <a href="${pageContext.request.contextPath}/logout">Logout</a>
+      </div>
+    </div>
+    <%}%>
+  </nav>
+
+  <div class="content container-fluid"> <!-- content -->
+
+    <br>
+
+    <div class="single-content">
+      <div class="content-heading">
+          Visa
+      </div>
+
+      <div class="row">
+        <div class="col-md-3 passport-links">
+          <a class="active-links" href="visa-sched-1.jsp">Application Information</a>
+          <a href="visa-sched-2.jsp">Site Location</a>
+          <a href="visa-sched-3.jsp">Date and Time</a>
+          <a href="visa-sched-4.jsp">Information Review</a>
+        </div>
+
+        <div class="col-md-8 form-side">
+          <div class="form-side-heading"> Application Information </div> <br>
+
+          <form action="visaappinfoservlet">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Last Name</label>
+                  <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Last Name" name="lname" required>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">First Name</label>
+                  <input type="text" class="form-control" id="exampleInputEmail1" placeholder="First Name" name="fname" required>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Middle Name</label>
+                  <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Middle Name" name="mname" required>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-8 book form-group"> <!-- date input form opening tag -->
+                  <label class="control-label"> Date of Birth </label>
+                  <div class="date">
+                    <div class="input-group input-append date" id="datepicker">
+                      <input required name="date"type="text" class="form-control" required></input>
+                      <span class="input-group-addon add-on">
+                      <i class="glyphicon glyphicon-calendar"></i></span>
+                    </div>
+                  </div>
+                </div> <!-- date input closing tag -->
+
+                <div class="col-md-4">
+                  <label class="control-label"> Gender </label>
+                  <div class="form-group">
+                    <div class="col-md-6">
+                      <div class="checkbox">
+                        <label>
+                          <input type="radio" name="gender" value="Male" required> Male
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="checkbox">
+                        <label>
+                          <input type="radio" name="gender" value="Female" required> Female
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>  <!-- row closing -->
+
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Contact Number</label>
+                  <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Contact Number" name="cnum" required>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email Address</label>
+                  <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Email" name="email" required>
+                </div>
+              </div>
+            </div>
+
+            <div class="row" id="travelCompanion">
+              <div class="col-md-5">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Traveling Companion's Name</label>
+                  <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Traveling Companion's Name" name="tcn">
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Relationship</label>
+                  <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Relationship" name="tcr">
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Contact Number</label>
+                  <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Contact Number" name="tccn">
+                </div>
+              </div>
+            </div>
+
+            <div class="pull-right">
+              <p>
+                <button type="submit" class="btn btn-default">Next</button>
+              </p>
+            </div>
+
+          </form>
+        </div>
+
+      </div>
+    </div> <!-- single-content -->
+
+  </div> <!-- content -->
+
+  <nav class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2">
+          <img src="images/gov-seal.jpg">
+        </div>
+
+        <div class="col-md-3">
+          <b>Republic of the Philippines</b> <br>
+          All content is in the public domain unless otherwise stated.
+        </div>
+
+        <div class="col-md-4">
+          <b> About GOVPH </b><br>
+          Learn more about the Philippine government, its structure,
+          how government works and the people behind it.
+          <br><br>
+          <a href="">Official Gazette </a> <br>
+          <a href="">Open Data Portal </a> <br>
+          <a href="">Send us your Feedback </a> <br>
+        </div>
+
+        <div class="col-md-3">
+          <b> Government Links</b><br>
+          <a href="">Office of the President </a> <br>
+          <a href="">Office of the Vice President </a> <br>
+          <a href="">Senate of the Philippines </a> <br>
+          <a href="">House of Representatives </a> <br>
+          <a href="">Supreme Court </a> <br>
+          <a href="">Court of Appeals </a> <br>
+          <a href="">Sandiganbayan</a> <br>
+
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+</body>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/moment.js"></script>
+<script src="js/bootstrap-datetimepicker.min.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/book.js"></script>
+<script src="js/gender-checker.js"></script>
+
+</html>
+
